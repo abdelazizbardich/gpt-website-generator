@@ -23,12 +23,12 @@ WORKDIR /var/www/html
 COPY . .
 
 # Install Laravel project dependencies using Composer
-RUN composer install --no-dev
+RUN composer install
 
 # Expose port 9000 for PHP-FPM (you can change this if needed)
 EXPOSE 8000
 # Start PHP-FPM
-CMD ["ls"]
+CMD ["php","artisan","serve"]
 
 # For MySQL, you can create a separate Docker container or link to an existing one
 # Here's an example of linking to a MySQL container (replace container_name with your MySQL container's name)
