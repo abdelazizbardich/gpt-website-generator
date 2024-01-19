@@ -24,7 +24,7 @@ COPY . .
 
 # Install Laravel project dependencies using Composer
 RUN composer install
-
+RUN chmod +x artisan
 # Expose port 9000 for PHP-FPM (you can change this if needed)
 EXPOSE 8000
 # Start PHP-FPM
