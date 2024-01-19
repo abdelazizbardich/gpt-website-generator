@@ -27,7 +27,7 @@ RUN composer install --no-dev
 
 # Expose port 9000 for PHP-FPM (you can change this if needed)
 EXPOSE 8000
-
+RUN pwd
 # Start PHP-FPM
 CMD ["php","artisan","serve"]
 
