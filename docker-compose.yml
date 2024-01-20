@@ -4,11 +4,9 @@ services:
   laravel-app:
     build:
       context: .  # Use the current directory as the build context
-      dockerfile: Dockerfile  # Use the Dockerfile for Laravel
+      dockerfile: dockerfile  # Use the Dockerfile for Laravel
     ports:
       - "8000:80"  # Map host port 8000 to container port 80
-    volumes:
-      - ./laravel:/var/www/html  # Mount your Laravel project directory to the container
     environment:
       - DB_CONNECTION=mysql
       - DB_HOST=mysql
