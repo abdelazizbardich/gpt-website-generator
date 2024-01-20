@@ -13,5 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/generate/{template}',[App\Http\Controllers\templateRendrerController::class, 'generate']);
+
 Route::get('/render/{url}',[App\Http\Controllers\templateRendrerController::class, 'render']);

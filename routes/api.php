@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/render/{template}', [App\Http\Controllers\templateRendrerController::class, 'render']);
+Route::post('/generate', [App\Http\Controllers\templateRendrerController::class, 'generate']);

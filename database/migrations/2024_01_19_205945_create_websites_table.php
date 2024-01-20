@@ -16,8 +16,9 @@ return new class extends Migration
         Schema::create('websites', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100)->nullable()->default('text');
+            $table->string('template', 500)->nullable()->default('text');
             $table->json('schema')->nullable();
-            $table->text('url')->unique();
+            $table->text('url',3000)->unique();
             $table->timestamps();
         });
     }
